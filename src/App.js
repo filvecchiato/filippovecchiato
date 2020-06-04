@@ -1,16 +1,15 @@
 import React from 'react';
 import * as S from './style.js';
 import Spinner from './components/Spinner'
+import Layout from '../src/HOC/Layout'
+import Routes from './Utilities/Routes';
 
 function App() {
   return (
     <S.App>
-      <S.Header/>
-      <S.Content>
-        <h1> Coming Soon!</h1>
-        <p>Something new is arriving soon!!</p>  
-        <Spinner/>
-      </S.Content>
+      <Layout>
+        <Routes/>
+      </Layout>
     </S.App>
   );
 }

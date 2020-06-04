@@ -1,4 +1,4 @@
-import { css } from "@emotion/core";
+import css from "@emotion/css/macro";
 import PropagateLoader from "react-spinners/PropagateLoader";
 import React from 'react';
 import {colours} from '../../global-styles';
