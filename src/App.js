@@ -9,6 +9,7 @@ function App() {
       <S.Content>
         <h1> Coming Soon!</h1>
         <p>Something new is arriving soon!!</p>  
+        <Spinner/>
       </S.Content>
     </S.App>
   );
