@@ -4,9 +4,13 @@ import useWindowSize from '../../Utilities/hooks/windowSize';
 import {withRouter} from 'react-router-dom';
 
 const Layout = props =>{
-	const {width} = useWindowSize();
+    const {width} = useWindowSize();
+    console.log(props)
 	return (
 		<div>
+            <header>
+            <p style={{textTransform: 'capitalize'}}> {props.location.pathname.replace(/\//g, '')}</p>
+            </header>
             {props.children}
         </div>
 	)	

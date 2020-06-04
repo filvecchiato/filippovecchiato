@@ -10,7 +10,7 @@ export const App = styled.div`
     justify-content: center;
 `;
 
-export const Header  =styled.header`
+export const Header  = styled.header`
     height: 60px;
     width: 100%;
 `;
@@ -24,10 +24,11 @@ export const Content = styled.div`
         width: fit-content;
         height: 20px;
         font-size: 18px;
-        color: ${colours.white01};
+        color: ${colours.grey05};
     }
     h1{
         margin: auto;
         width: fit-content; 
+        ${colours.grey05}
     }
 `;

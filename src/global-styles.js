@@ -50,8 +50,8 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Saira', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
         letter-spacing: 1px;
-        color: ${colours.white01};
-        background-color: ${colours.grey05};
+        color: ${colours.grey05};
+        background-color: ${colours.white01};
     }
 
     body.fontLoaded {
@@ -59,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     #app {
-        background-color: ${colours.grey05};
+        background-color: ${colours.white01};
         min-height: 100%;
         min-width: 100%;
     }
