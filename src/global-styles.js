@@ -6,10 +6,10 @@ const colours = {
     grey01: '#EAEAEC',
     grey02: '#D5D6DA',
     grey03: '#92949E',
-    grey04: '#565968',
-    grey05: '#2F3245',
+    grey04: '#888888',
+    grey05: '#212121',
     blue01: '#AFB8EC',
-    blue02: '#4D60C4',
+    blue02: '#0049FF',
     blue03: '#37458B',
     blue04: '#212F77',
     green01: '#08D9AB',
@@ -17,7 +17,7 @@ const colours = {
     red01: '#DF1243',
     red02: '#FF6E66',
     orange01: '#FF843A',
-    yellow01: '#FFC001',
+    yellow01: '#FFB600',
   };
   
   const sizes = {
@@ -50,7 +50,8 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Saira', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
         letter-spacing: 1px;
-        color: ${colours.white01};
+        margin: 0;
+        color: ${colours.grey04};
         background-color: ${colours.grey05};
     }
 
@@ -68,8 +69,12 @@ const GlobalStyle = createGlobalStyle`
         font-family: inherit;
         letter-spacing: 1px;
         appearance: none;
+        background: transparent;
+        border: unset;
         cursor: pointer;
-
+        &:focus{
+          outline: none;
+        }
         &[disabled] {
         cursor: default;
         }
