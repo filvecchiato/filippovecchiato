@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Route, Redirect, Switch} from 'react-router-dom';
-import NoMatch from '../components/NoMatch';
+import NoMatch from '../components/General/NoMatch';
 import Homepage from '../containers/Homepage'
 
 const Routes = props => {
