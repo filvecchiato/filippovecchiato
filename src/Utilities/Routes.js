@@ -12,7 +12,9 @@ const Routes = props => {
             <Route exact path="/contacts" />
             <Route exact path="/works" />
             <Route exact path="/passions" />
+            <Redirect path="/" to="/home"/>
             <Route path="*" component={NoMatch}/>
+           
         </Switch>
     )
 }

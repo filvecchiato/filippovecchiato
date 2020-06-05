@@ -1,34 +1,12 @@
 import styled from 'styled-components';
-import { colours } from './global-styles';
+// import { colours } from './global-styles';
 
 
 export const App = styled.div`
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    width: calc(100vw - 8px);
+    height: calc(100vh - 8px);
+    margin: 4px;
     flex-direction: column;
     justify-content: center;
-`;
-
-export const Header  = styled.header`
-    height: 60px;
-    width: 100%;
-`;
-
-export const Content = styled.div`
-    height: calc(100% - 60px);
-    width: 100%;
-    vertical-align: middle;
-    p{
-        margin: auto;
-        width: fit-content;
-        height: 20px;
-        font-size: 18px;
-        color: ${colours.grey05};
-    }
-    h1{
-        margin: auto;
-        width: fit-content; 
-        ${colours.grey05}
-    }
 `;

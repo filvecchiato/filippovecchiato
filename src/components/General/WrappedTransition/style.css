@@ -1,0 +1,13 @@
+.textFadeIn-enter, .textFadeIn-appear{
+    opacity: 0;
+}
+.textFadeIn-enter-active, .textFadeIn-appear-active{
+    opacity: 1;
+    transition: opacity 700ms ease-in;
+}
+.textFadeIn-exit{
+    opacity: 1
+}
+.textFadeIn-exit-active{
+    transition: opacity 300ms ease-in;
+}

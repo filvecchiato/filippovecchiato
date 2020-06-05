@@ -21,14 +21,12 @@ const store = createStore(rootReducer, composeEnhancers(
 ));
 
 ReactDOM.render(
-  <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
         <App />
         <GlobalStyle/>
       </BrowserRouter>
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById('root')
 );
 

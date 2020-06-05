@@ -1,6 +1,5 @@
 import React from 'react';
 import * as S from './style.js';
-import Spinner from './components/Spinner'
 import Layout from '../src/HOC/Layout'
 import Routes from './Utilities/Routes';
 
