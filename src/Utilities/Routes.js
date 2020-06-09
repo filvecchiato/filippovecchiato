@@ -14,9 +14,8 @@ const Routes = props => {
             <Route exact path="/passions" />
             <Route exact path="/engineering" />
             <Route exact path="/consulting" />
-            <Redirect path="/" to="/home"/>
+            <Redirect exact path="/" to="/home"/>
             <Route path="*" component={NoMatch}/>
-           
         </Switch>
     )
 }
