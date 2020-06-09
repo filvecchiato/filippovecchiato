@@ -9,4 +9,5 @@ export const App = styled.div`
     margin: 4px;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 `;

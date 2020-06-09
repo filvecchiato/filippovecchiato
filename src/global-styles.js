@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle} from 'styled-components';
 
 
 const colours = {
@@ -20,22 +20,22 @@ const colours = {
     yellow01: '#FFB600',
   };
   
-  const sizes = {
-    smallDesktop: 1400,
-    desktop: 992,
-    tablet: 768,
-    phone: 576,
-  };
+  // const sizes = {
+  //   smallDesktop: 1400,
+  //   desktop: 992,
+  //   tablet: 768,
+  //   phone: 576,
+  // };
   
-  const media = Object.keys(sizes).reduce((acc, label) => {
-    acc[label] = (...args) => css`
-      @media (max-width: ${sizes[label] / 16}em) {
-        ${css(...args)};
-      }
-    `;
+  // const media = Object.keys(sizes).reduce((acc, label) => {
+  //   acc[label] = (...args) => css`
+  //     @media (max-width: ${sizes[label] / 16}em) {
+  //       ${css(...args)};
+  //     }
+  //   `;
   
-    return acc;
-  }, {});
+  //   return acc;
+  // }, {});
 
 
 const GlobalStyle = createGlobalStyle`
@@ -89,4 +89,4 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 
-export { colours, media, GlobalStyle };
+export { colours, GlobalStyle };

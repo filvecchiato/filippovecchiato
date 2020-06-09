@@ -9,11 +9,13 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, createStore, compose ,combineReducers} from 'redux';
 import thunk from 'redux-thunk';
 import locationReducer from './Utilities/store/reducers/location';
+import uiReducer from './Utilities/store/reducers/UI';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer=combineReducers({
-  location: locationReducer
+  location: locationReducer,
+  UI: uiReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers(
@@ -23,7 +25,7 @@ const store = createStore(rootReducer, composeEnhancers(
 ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <App className="App"/>
         <GlobalStyle/>
       </BrowserRouter>
     </Provider>,

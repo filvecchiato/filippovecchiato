@@ -8,3 +8,10 @@ export const Container = styled.div`
     padding: 2px;
 `;
 
+export const Name = styled.h1`
+    margin: '2px 10px';
+    letter-spacing: 3px;
+    font-size: 25px;
+    font-style: italic;
+`;
+

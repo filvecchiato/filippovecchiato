@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import {colours} from '../../global-styles';
 
 export const Content = styled.div`
-    position: absolute;
-    top: calc(50vh - 65px);
-    left: 10px;
+    margin: auto;
+    
 `;
 
 export const TextSt = styled.div`
@@ -13,4 +12,7 @@ export const TextSt = styled.div`
     color: ${colours.grey04};
     margin: 0;
     padding: 5px;
+    @media(max-width: 800px){
+        font-size: 14px;
+    };
 `;

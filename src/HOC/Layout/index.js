@@ -1,15 +1,14 @@
 import React from 'react';
-import {connect} from 'react-redux';
-// import useWindowSize from '../../Utilities/hooks/windowSize';
+import useWindowSize from '../../Utilities/hooks/windowSize';
 import {withRouter} from 'react-router-dom';
 import * as S from './style';
 import Toolbar from '../../components/Navigation/Toolbar';
-import {SocialLinks} from '../../components/Navigation/SocialLinks';
-import {PageNavigations} from '../../components/Navigation/PageNavigations';
+// import {SocialLinks} from '../../components/Navigation/SocialLinks';
+// import {PageNavigations} from '../../components/Navigation/PageNavigations';
 import {WrappedTransition} from '../../components/General/WrappedTransition';
 
 const Layout = props =>{
-    // const {width} = useWindowSize();
+    const {width} = useWindowSize();
     const {
         location,
         children
@@ -17,36 +16,34 @@ const Layout = props =>{
 
 	return (
 		<React.Fragment>
-            {location.pathname!=='/home' &&
-                <WrappedTransition
-                    timeout={4000}
-                    className={'textFadeIn'}
-                    in
-                >
-                    <S.Header>
-                        <Toolbar
-                            location={location.pathname}
-                        />
-                    </S.Header>
-                </WrappedTransition>
-            }
+            <WrappedTransition
+                timeout={4000}
+                className={'textFadeIn'}
+                in
+            >
+                <S.Header>
+                    <Toolbar
+                        location={location.pathname}
+                    />
+                </S.Header>
+            </WrappedTransition>
             <S.Body>
                 <WrappedTransition
                     timeout={4000}
                     className={'textFadeIn'}
                     in
                 >
-                    <SocialLinks
+                    {/* <SocialLinks
                         location={location.pathname}
-                    />
+                    /> */}
                 </WrappedTransition>
-                {location.pathname ==='/home' &&
+                {location.pathname ==='/home' && width>800 &&
                     <WrappedTransition
                         timeout={4000}
                         className={'textFadeIn'}
                         in
                     >
-                        <PageNavigations/>
+                        {/* <PageNavigations/> */}
                     </WrappedTransition>
                 }
                 {children}
@@ -55,4 +52,4 @@ const Layout = props =>{
 	)	
 }
 
-export default connect(null)(withRouter(Layout));
+export default withRouter(Layout);

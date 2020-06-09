@@ -7,10 +7,9 @@ export const Container = styled.div`
     border: unset;
     color: ${colours.green01};
     
-    ${props=> props.location==="/home" ? 
+    ${ props=> props.location==="/home" ? 
         css`
-            bottom: 5px;
-            left: calc(50vw - 112px);
+            position: unset;
             display:flex;
             flex-direction: row;
         `
