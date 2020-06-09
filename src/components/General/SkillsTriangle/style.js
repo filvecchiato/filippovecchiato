@@ -32,7 +32,7 @@ export const LeftButton = styled.div`
         margin: 0 120px;
         color: ${colours.white01};
         &:hover{
-            color: ${colours.green01}
+            color: ${colours.highlights}
         }
     }
 `;
@@ -53,7 +53,7 @@ export const RightButton = styled.div`
         margin: 0 150px;
         color: ${colours.white01};
         &:hover{
-            color: ${colours.green01}
+            color: ${colours.highlights}
         }
     }
 `;
@@ -73,7 +73,7 @@ export const BottomButton = styled.div`
         margin: 0 135px;
         color: ${colours.white01};
         &:hover{
-            color: ${colours.green01}
+            color: ${colours.highlights}
         }
     }
 `;

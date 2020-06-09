@@ -9,7 +9,7 @@ export const Content = styled.div`
 
 export const TextSt = styled.div`
     font-size: 24px;
-    color: ${colours.grey04};
+    color: ${colours.grey02};
     margin: 0;
     padding: 5px;
     @media(max-width: 800px){

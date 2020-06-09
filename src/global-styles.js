@@ -1,7 +1,8 @@
 import { createGlobalStyle} from 'styled-components';
 
-
 const colours = {
+    background: '#343E46',
+    highlights: '#F19334',
     white01: '#FFFFFF',
     grey01: '#EAEAEC',
     grey02: '#D5D6DA',
@@ -52,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
         letter-spacing: 1px;
         margin: 0;
         color: ${colours.grey04};
-        background-color: ${colours.grey05};
+        background-color: ${colours.background};
     }
 
     body.fontLoaded {

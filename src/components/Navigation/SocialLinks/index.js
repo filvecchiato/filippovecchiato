@@ -3,11 +3,11 @@ import React from 'react';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import SendIcon from '@material-ui/icons/Send';
-import {SocialLink} from '../SocialLink';
+import {SocialLink} from './SocialLink';
 import * as S from './style';
 
 export const SocialLinks = props => {
-    console.log(props)
+    console.log(props.location)
     return (
         <S.Container location={props.location}>
             <SocialLink

@@ -1,6 +1,8 @@
 import React from 'react';
 import * as S from './style';
-import TriangleSkills from '../../components/General/SkillsTriangle';
+// import TriangleSkills from '../../components/General/SkillsTriangle';
+import {WrappedTransition} from '../../components/General/WrappedTransition';
+
 export default class Homepage extends React.Component{
     state={
         text1: false,
@@ -18,14 +20,14 @@ export default class Homepage extends React.Component{
     render(){
         return (
             <S.Content>
-                <TriangleSkills/>
-                {/* <WrappedTransition
+                {/* <TriangleSkills/> */}
+                <WrappedTransition
                     timeout={1000}
                     in={this.state.text1}
                     className={'textFadeIn'}
                     onEntering={()=>this.setOpen('text2')}
                 >
-                    <S.TextSt>A Software Developer, focused on Frontend Development</S.TextSt> 
+                    <S.TextSt> A Software Developer, focused on Frontend Development</S.TextSt> 
                 </WrappedTransition>
                 <WrappedTransition
                     timeout={1500}
@@ -41,7 +43,8 @@ export default class Homepage extends React.Component{
                     in={this.state.text3}
                 >
                   <S.TextSt> A Consultant, Goal-oriented with an Eye for Detail</S.TextSt>
-                </WrappedTransition> */}
+                </WrappedTransition>
+                {/* move the triangle in after the text bottom up in transition */}
             </S.Content>
         );
     };

@@ -1,23 +1,31 @@
 import React from 'react';
 import * as S from './style';
-import {NavigationItems} from '../NavigationItems';
-import {SocialLinks} from '../SocialLinks';
+import {NavigationItems} from '../MainNavigationItems';
+import {withRouter} from 'react-router-dom';
+import useWindowSize from '../../../Utilities/hooks/windowSize';
 
 const Toolbar = props => {
-    console.log(props)
+    const {width} = useWindowSize();
     return (
         <S.Container>
-            {props.location !=="/home" &&
-                <NavigationItems/>
-            }
-            {props.location ==="/home" &&
+            {props.location.pathname !=="/home" &&
                 <React.Fragment>
-                    <S.Name> Filippo Vecchiato </S.Name>
-                    <SocialLinks location={props.location}/>
+                    <S.NameContainer onClick={()=>props.history.push('/home')}>
+                        <S.Name> Filippo Vecchiato </S.Name>
+                    </S.NameContainer>
+                    <NavigationItems location={props.location.pathname}/>
+                </React.Fragment>
+            }
+            {props.location.pathname === "/home" && 
+                <React.Fragment>
+                    <div style={{margin: '2px 10px'}}>
+                        <S.Name> Filippo Vecchiato </S.Name>
+                    </div>
+                    <NavigationItems location={props.location.pathname}/>
                 </React.Fragment>
             }
         </S.Container>
     )
 }
 
-export default Toolbar;
+export default withRouter(Toolbar);
