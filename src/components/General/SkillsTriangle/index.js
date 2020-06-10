@@ -1,37 +1,39 @@
 import React from 'react';
-// import useWindowSize from '../../../Utilities/hooks/windowSize';
+import useWindowSize from '../../../Utilities/hooks/windowSize';
 import * as S from './style.js';
-import {ReactComponent as InnerTriangle} from '../../../assets/svgs/innerTriangle.svg';
-import {WrappedTransition} from '../WrappedTransition';
+import Triangle from '../../../assets/svgs/innerTriangle.svg';
+// import {WrappedTransition} from '../WrappedTransition';
 import {NavLink} from 'react-router-dom';
 const SkillsTriangle = props => {
-    // const skills = [
-    //     {name: "Engineering", page: '/engineering'},
-    //     {name: "Consulting", page: '/consulting'},
-    //     {name: "Software Dev.", page: '/software-development'},
-    // ];
-    // const {width} = useWindowSize();
+    const {width} = useWindowSize();
     return (
-        <WrappedTransition
-            timeout={1000}
-            in
-            className={'textFadeIn'}
-        >
-            <S.TriangleContainer>
-                <S.OuterTriangle>
-                    <InnerTriangle style={{margin: '75px 0'}}/>
-                    <S.BottomButton >
-                        <NavLink to={'/engineering'}> Engineering </NavLink>
-                    </S.BottomButton>
-                    <S.RightButton >
-                        <NavLink to={'/consulting'}> Consulting </NavLink>
-                    </S.RightButton>
-                    <S.LeftButton> 
-                        <NavLink to={'/projects'}> Software Dev </NavLink>
-                    </S.LeftButton>
-                </S.OuterTriangle>
-            </S.TriangleContainer>
-        </WrappedTransition>
+        <S.TriangleContainer id="skills-triangle-container">
+            <S.Triangle src={Triangle} alt="triangleSkills" id="triangle-svg"/>
+            <S.SkillsButton
+                id="button skill"
+                top="calc(17% + 20px)"
+                left="calc(50% - 10px)"
+                rotation="55.3deg"
+            >
+                <NavLink to={'/work'}> {width<=400 ? 'Development':'Software Development'} </NavLink>
+            </S.SkillsButton>
+            <S.SkillsButton
+                id="button skill"
+                top="calc(57% - 10px)"
+                left="25%"
+                rotation="0deg"
+            >
+                <NavLink to={'/work'}> {width<=400? 'Deep Drive':'Market Deep Drive'} </NavLink>
+            </S.SkillsButton>
+            <S.SkillsButton
+                id="button skill"
+                top="calc(17% + 20px)"
+                left="calc(0% + 10px)"
+                rotation="-55.3deg"
+            >
+                <NavLink to={'/work'}> {width<=400? 'Engineered':'Engineered Process'}</NavLink>
+            </S.SkillsButton>
+        </S.TriangleContainer>
     );
 };
 export default SkillsTriangle;

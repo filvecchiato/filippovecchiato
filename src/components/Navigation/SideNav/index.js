@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
-import {colours} from '../../../global-styles';
-import NavItem from '../NavigationItems/NavigationItem';
+// import {colours} from '../../../global-styles';
+import NavItem from '../SecondaryNavigation';
 
 const SideNavSt = styled.div`
     opacity:0.8;
@@ -39,7 +39,7 @@ const NavItemsSt = styled.div`
 const pages = [
     {name: "Home", link: "/home"},
     {name: "Bio", link: "/about"},
-    {name: "Software Dev", link: "/projects"},
+    {name: "Work", link: "/projects"},
     {name: "Consulting", link: "/consulting"},
     {name: "Engineering", link: "/engineering"},
     {name: "Contacts", link: "/contacts"},
@@ -64,7 +64,9 @@ const SideNav = props => {
                 })}
             </NavItemsSt>
         </SideNavSt>
-    )
-}
+    );
+};
+
+
 
 export default SideNav;

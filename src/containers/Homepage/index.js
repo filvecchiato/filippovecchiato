@@ -1,7 +1,6 @@
 import React from 'react';
 import * as S from './style';
-// import TriangleSkills from '../../components/General/SkillsTriangle';
-import {WrappedTransition} from '../../components/General/WrappedTransition';
+import TriangleSkills from '../../components/General/SkillsTriangle';
 
 export default class Homepage extends React.Component{
     state={
@@ -16,35 +15,23 @@ export default class Homepage extends React.Component{
     componentDidMount(){
         this.setOpen('text1')
     }
-
+    // A Software Developer, focused on Frontend Development
+    // An Engineer, specialised in Data Driven Disruption
+    // A Consultant, Goal-oriented with an Eye for Detail
     render(){
         return (
             <S.Content>
-                {/* <TriangleSkills/> */}
-                <WrappedTransition
-                    timeout={1000}
-                    in={this.state.text1}
-                    className={'textFadeIn'}
-                    onEntering={()=>this.setOpen('text2')}
-                >
-                    <S.TextSt> A Software Developer, focused on Frontend Development</S.TextSt> 
-                </WrappedTransition>
-                <WrappedTransition
-                    timeout={1500}
-                    className={'textFadeIn'}
-                    in={this.state.text2}
-                    onEntering={()=>this.setOpen('text3')}
-                >
-                   <S.TextSt> An Engineer, specialised in Data Driven Disruption</S.TextSt>
-                </WrappedTransition>
-                <WrappedTransition
-                    timeout={2000}
-                    className={'textFadeIn'}
-                    in={this.state.text3}
-                >
-                  <S.TextSt> A Consultant, Goal-oriented with an Eye for Detail</S.TextSt>
-                </WrappedTransition>
-                {/* move the triangle in after the text bottom up in transition */}
+                <S.TextSt>
+                    <h1>I architect and build webapps</h1> 
+                    <h1>Each webapp is aimed at optimising the industry.</h1>
+                    
+                    <p>Deep drive investigation</p>
+                    <p>Engineered development</p>
+                    <p>Industry Disruption</p>
+                </S.TextSt>
+                <S.FeaturedBlock>
+                    <TriangleSkills/>
+                </S.FeaturedBlock>
             </S.Content>
         );
     };

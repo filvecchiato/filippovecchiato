@@ -8,7 +8,6 @@ const NavLinkSt = styled(NavLink)`
     margin: auto 15px;
     padding: 0px 10px;
     width: calc(100% - 80px);
-    height: 40px;
     color: ${colours.grey03};
 
     &:hover{
@@ -17,6 +16,9 @@ const NavLinkSt = styled(NavLink)`
     &.active{
         color: ${colours.highlights};
         border-bottom: 2px solid ${colours.highlights};
+    }
+    p{
+        margin: auto;
     }
 `;
 

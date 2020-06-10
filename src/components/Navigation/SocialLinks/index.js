@@ -5,11 +5,13 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import SendIcon from '@material-ui/icons/Send';
 import {SocialLink} from './SocialLink';
 import * as S from './style';
+import useWindowSize from '../../../Utilities/hooks/windowSize';
 
 export const SocialLinks = props => {
-    console.log(props.location)
+    const {width} = useWindowSize();
+
     return (
-        <S.Container location={props.location}>
+        <S.Container location={props.location} width={width}>
             <SocialLink
                 link="https://www.linkedin.com/in/filippo-vecchiato/"
                 label="Filippo's LinkedIn Account"

@@ -2,7 +2,7 @@ import React from 'react';
 import GeneralNav from './GeneralNavigationItem';
 import * as S from './style';
 import windowSize from '../../../Utilities/hooks/windowSize';
-import Toggle from './../SideNav/Toggle';
+import Toggle from '../SideNav/Toggle';
 
 export const NavigationItems = props => {
     const pages = [

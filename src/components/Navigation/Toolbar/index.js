@@ -2,10 +2,10 @@ import React from 'react';
 import * as S from './style';
 import {NavigationItems} from '../MainNavigationItems';
 import {withRouter} from 'react-router-dom';
-import useWindowSize from '../../../Utilities/hooks/windowSize';
+// import useWindowSize from '../../../Utilities/hooks/windowSize';
 
 const Toolbar = props => {
-    const {width} = useWindowSize();
+    // const {width} = useWindowSize();
     return (
         <S.Container>
             {props.location.pathname !=="/home" &&

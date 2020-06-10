@@ -2,78 +2,47 @@ import styled from 'styled-components';
 import {colours} from '../../../global-styles';
 
 export const TriangleContainer = styled.div`
-    height: 80vh;
-    width: 80vh;
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+    margin: auto;
+    position: absolute;
+    padding: 20px;
+    top: 0px;
+    left: 0px;
+    @media(max-width:400px){
+        padding: 20px 10px;
+    };
+`;
+
+export const Triangle = styled.img`
+    width: 100%;
+    height: 100%;
     margin: auto;
 `;
 
-export const InnerTriangle = styled.div`
-    height: 50vh;
-    width:  50vh;
-`;
-
-export const OuterTriangle = styled.div`
-    width: 100%;
-    height: 100%;
-`;
-
-export const LeftButton = styled.div`
-    position: relative;
-    width: 500px;
-    height: 80px;   
-    transform: rotate(-55.3deg);
-    top: -617px;
-    left: -57px;
+export const SkillsButton = styled.div`
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: 50%; 
+    top: ${props=>props.top};
+    left: ${props=>props.left};
     justify-content:center;
+    vertical-align: middle;
+
     a {
+        display: flex;
+        width: fit-content;
+        height:fit-content;
         text-decoration: unset;
-        font-size: 40px;
+        font-size: calc(120%);
         z-index: 2;
-        margin: 0 120px;
+        margin: auto;
+        transform: ${props=>props.rotation && `rotate(${props.rotation})`};
         color: ${colours.white01};
         &:hover{
-            color: ${colours.highlights}
+            color: ${colours.green01}
         }
     }
 `;
 
-export const RightButton = styled.div`
-    width: 500px;
-    height: 80px;
-    position: relative;
-    font-size: 40px;
-    top: -536px;
-    left: 305px;
-    transform: rotate(55.3deg);
-    justify-content:center;
-    a{
-        text-decoration: unset;
-        font-size: 40px;
-        z-index: 2;
-        margin: 0 150px;
-        color: ${colours.white01};
-        &:hover{
-            color: ${colours.highlights}
-        }
-    }
-`;
-
-export const BottomButton = styled.div`
-    width: 500px;
-    height: 80px;
-    position: relative;
-    font-size: 40px;
-    top: -166px;
-    left: 125px;
-    justify-content:center;
-    a {
-        text-decoration: unset;
-        font-size: 40px;
-        z-index: 2;
-        margin: 0 135px;
-        color: ${colours.white01};
-        &:hover{
-            color: ${colours.highlights}
-        }
-    }
-`;

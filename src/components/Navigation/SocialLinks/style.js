@@ -6,8 +6,9 @@ export const Container = styled.div`
     background: transparent;
     border: unset;
     color: ${colours.green01};
-    
-    ${ props=> props.location==="/home" ? 
+    z-index: 2;
+    ${props=>console.log(props)}
+    ${ props=> (props.location==="/home" || props.width <= 400) ? 
         css`
             position: unset;
             display:flex;

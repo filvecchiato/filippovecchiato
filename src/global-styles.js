@@ -2,7 +2,8 @@ import { createGlobalStyle} from 'styled-components';
 
 const colours = {
     background: '#343E46',
-    highlights: '#F19334',
+    highlights: '#EAEAEC',
+    black: '#000000',
     white01: '#FFFFFF',
     grey01: '#EAEAEC',
     grey02: '#D5D6DA',
